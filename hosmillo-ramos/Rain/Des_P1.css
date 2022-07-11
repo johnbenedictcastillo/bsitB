@@ -1,0 +1,173 @@
+#main-tbl-prod
+{
+	width: 60%;
+	padding-top: 4vw;
+	padding-bottom: 4vw;
+}
+
+#main
+{
+	background-color: #fcf1ff;
+}
+
+#a_loc, #a_loc:active
+{
+	text-decoration: none;
+	font-family: Helvetica Neue;
+	font-size: 10pt;
+	color: black;
+}
+
+#a_loc:hover
+{
+	text-decoration: underline;
+}
+
+#product_image
+{
+	max-width: 280px;
+}
+
+#td_product-image
+{
+	padding-left: 4vw;
+	padding-top: 3vw;
+	width: 30%;
+}
+
+#btn_cart
+{
+	height: 40px;
+	background-color: #61286f;
+	border: 0;
+	width: 150px;
+	font-family: Gotham Black;
+	color: white;
+}
+
+#btn_cart:hover
+{
+	background-color: #b444d0;
+	color: white;
+}
+
+#btn_wl:hover
+{
+	color: #b444d0;
+}
+
+#btn_wl
+{
+	height: 30px;
+	background-color: white;
+	border: 0px;
+	width: 150px;
+	font-family: Gotham Black;
+	color: #61286f;
+	font-size: 9pt;
+}
+
+input
+{
+	height: 30px;
+	width: 50px;
+	padding-left: 10px;
+	background-color: #fcf1ff;
+	border: 0px;
+}
+
+#btn_review
+{
+	width: 150px;
+	height: 50px;
+	font-family: Gotham Black;
+	font-size: 8pt;
+	color: white;
+	background-color: #61286f;
+	border: 0;
+}
+
+#btn_review:hover
+{
+	background-color: #fcf1ff;
+	color: #61286f;
+	border: 2px solid  #61286f;
+}
+
+#td_cname, #td_comment
+{
+	padding-left: 4vw;
+	vertical-align: top;
+	font-family: Helvetica Neue;
+	font-size: 12pt;
+	color: black;
+	height:7vw;
+}
+
+#td_merged
+{
+	padding-left: 4vw;
+	padding-top: 2vw;
+	padding-right: 3vw;
+}
+
+#td_cname
+{
+	text-align: right;
+}
+
+.checked
+{
+	color: #61286f;
+}
+
+#product-tabs
+{
+	padding-left: 4vw;
+	padding-right: 2vw;
+	padding-top: 2vw;
+	vertical-align: top;
+}
+
+#product-tabs img
+{
+	max-width: 250px;
+}
+
+#product-tabs img:hover, #fb_cells img:hover
+{
+	transform: scale(1.1);
+}
+
+#fb_cells
+{
+	text-align: center;
+	vertical-align: top;
+	max-width: 250px;
+ 	text-align: right;
+ 	padding-right: 3vw;
+}
+
+ #fb_cells img
+ {
+ 	padding-left: 2vw;
+ 	max-width: 100px;
+ }
+
+ #fb_cells a:active, a
+ {
+ 	text-decoration: none;
+ }
+
+ #link_fb a:active, a
+ {
+ 	text-decoration: none;
+ 	font-family: Helvetica Neue;
+ 	font-size: 10pt;
+ 	color: black;
+ }
+
+ #link_fb a:hover
+ {
+ 	text-decoration: underline;
+ }

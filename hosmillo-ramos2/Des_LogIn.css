@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+}
+
+.si_registration {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	height: 400px;
+	background-image: url("Image-Files/header_blur.png");
+	background-size: cover;
+}
+
+.si_registration a,
+a:active {
+	color: white;
+}
+
+#tbl_regi {
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 55%;
+	height: 120%;
+	align-items: center;
+}
+
+#td_regi_left {
+	color: white;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	width: 50%;
+	background-image: url("Image-Files/header_gradient.png");
+	background-size: cover;
+}
+
+#td_regi_right {
+	background-color: white;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+input#fld {
+	height: 35px;
+	padding-left: 10px;
+	width: 250px;
+	font-family: Helvetica Neue;
+	border: none;
+	border-bottom: 1px solid #4d4d4d;
+}
+
+input:focus {
+	outline: 0;
+}
+
+form {
+	font-family: Helvetica Neue;
+	font-size: 9pt;
+	color: #8e8e8e;
+}
+
+#btn_signup {
+	height: 7vh;
+	width: 10vw;
+	background-color: #61286f;
+	border: 0;
+	font-family: Helvetica Neue;
+	color: white;
+}
+
+#btn_fb {
+	height: 6vh;
+	width: 15vw;
+	background-color: white;
+	border: 1;
+	border-radius: 20px;
+	font-family: Helvetica Neue;
+	color: black;
+	border-color: #0161ce;
+}
+
+#btn_gmail {
+	height: 6vh;
+	width: 15vw;
+	background-color: white;
+	border: 1;
+	border-radius: 20px;
+	font-family: Helvetica Neue;
+	color: black;
+	border-color: #dc1624;
+}
+
+#btn_fb:hover {
+	background-color: #0161ce;
+	color: white;
+	border-color: white;
+}
+
+#btn_gmail:hover {
+	background-color: #dc1624;
+	color: white;
+	border-color: white;
+}

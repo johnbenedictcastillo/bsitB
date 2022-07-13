@@ -67,7 +67,7 @@ function addItemFunction(e){
     const name = e.target.parentElement.previousElementSibling.textContent
     const desc = e.target.parentElement.children[0].textContent
     let price = e.target.parentElement.children[1].textContent
-    price = price.replace("Price: $", '')
+    price = price.replace("$", '')
     const item = new CartItem(name, desc, img, price)
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)

@@ -142,6 +142,7 @@ header .fa-bars {
 
 .product-side .side-content {
     border-bottom: 1px solid #eee;
+    width: 50%;
 }
 
 .product-side .side-content:last-child {
@@ -251,17 +252,20 @@ body {
 .container .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.container .products-container .card-item {
+.container .products-container .product {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 1rem 1rem;
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     outline: .1rem solid #ccc;
     outline-offset: -1.5rem;
     cursor: pointer;
+    height: 250px;
+    width: 400px;
+    margin-left: 0px;
 }
 
 .container .products-container .product:hover {
@@ -270,7 +274,7 @@ body {
 }
 
 .container .products-container .product img {
-    height: 25rem;
+    height: 15rem;
 }
 
 .container .products-container .product:hover img {
@@ -290,6 +294,14 @@ body {
 .container .products-container .product .price {
     font-size: 2rem;
     color: #444;
+    text-align: center;
+}
+
+.container .products-container .product .info {
+    font-size: 1.6rem;
+    color: #444;
+    text-align: center;
+    margin-right: 200px;
 }
 
 .products-preview {
@@ -311,7 +323,11 @@ body {
     background: #fff;
     position: relative;
     margin: 2rem;
-    width: 40rem;
+    width: 35rem;
+}
+
+.products-preview .preview .price {
+    text-align: center;
 }
 
 .products-preview .preview.active {
@@ -359,12 +375,24 @@ body {
     padding: 1rem 0;
     font-size: 1.6rem;
     color: #777;
+    text-align: center;
+}
+
+.products-preview .preview p .info{
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #777;
+    margin-left: 15px;
 }
 
 .products-preview .preview .price {
+    line-height: 1.5;
     padding: 1rem 0;
     font-size: 2.5rem;
     color: #27ae60;
+    margin-left: 118px;
+    margin-right: 200px;
 }
 
 .products-preview .preview .buttons {
@@ -910,7 +938,7 @@ margin-top: 35%;
     /* margin-top:10px; */
     padding: 10px 15px;
     cursor: pointer;
-    background-color: rgba(248, 154, 65, 0.162);
+    background-color: rgba(154, 96, 42, 0.581);
     border-radius: 3px;
     font-size: large;
     color:#fff

@@ -44,7 +44,6 @@ async function getUser() {
             }
       tbody.html(tr);
       loading.text("")
-
   }
 
 }

@@ -30,9 +30,6 @@ $(document).ready(function(){
   
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
+      saveUser()
     });
-    $( "#get-user" ).click(function( event ) {
-      event.preventDefault();
-        getUser();
-    })
   });

@@ -33,6 +33,6 @@ $(document).ready(function(){
       let email = $('#emailadd').val();
       let username = $('#uname').val();
       let password = $('#psw').val();
-      saveUser(email,username,password)
+      saveUser(email,username,password);
     });
   });

@@ -752,26 +752,3 @@ li {
     }
 
 }
-
-/*success*/
-
-.popup{
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-}
-
-
-.popup img{
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, o, o, o.2);
-}

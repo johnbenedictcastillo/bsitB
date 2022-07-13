@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="/casabal-singson/js/main.js" defer></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 
 </head>
 
@@ -59,13 +61,30 @@
         </div>
     </div>
 
-    <div class="popup">
-        <img src="/casabal-singson/photos/check.png">
-        <h2>Welcome!</h2>
-        <p>You have successfully logged in.</p>
-        <button type="button">Ok</button>
-    </div>
 </body>
+<script>
+
+if (input.equals(password)){
+    login = true;
+Swal.fire(
+  'Welcome!',
+  'You Have successfully logged in!',
+  'success'
+)
+}
+
+
+else{
+    Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Incorrect Email or Password!',
+})
+
+}
+
+
+</script>
 
 </html>
 

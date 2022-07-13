@@ -51,7 +51,7 @@ async function getUser() {
 
 $(document).ready(function(){
 
-  
+ 
     $('#students-table').hide();
     // jQuery methods go here
     $( "#registration" ).submit(function( event ) {

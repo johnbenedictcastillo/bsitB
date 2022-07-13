@@ -30,6 +30,9 @@ $(document).ready(function(){
   
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
-      saveUser()
+      let email = $('#email').val();
+      let uname = $('#uname').val();
+      let psw = $('#psw').val();
+      saveUser(email,uname,psw)
     });
   });

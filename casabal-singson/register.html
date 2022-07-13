@@ -26,18 +26,18 @@
                     <div class="heading mb-4">
                         <h4>Create an account</h4>
                     </div>
-                    <form>
+                    <form action="/casabal-singson/connect.php" method="post">
                         <div class="form-input">
                             <span><i class="fa fa-user"></i></span>
-                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-envelope"></i></span>
-                            <input type="email" placeholder="Email Address" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-lock"></i></span>
-                            <input type="password" placeholder="Password" required>
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12 d-flex">

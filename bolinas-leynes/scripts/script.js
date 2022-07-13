@@ -15,7 +15,7 @@ async function saveUser(email, username, password){
 })
   if(data) {
     console.log(data)
-    saveUser();
+    saveUser(email, username, password);
 
   }
   if(error) {

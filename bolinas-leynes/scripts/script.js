@@ -27,7 +27,7 @@ async function saveUser(email, uname, psw){
 }
 
 $(document).ready(function(){
-
+  
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
     });

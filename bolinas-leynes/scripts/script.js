@@ -6,12 +6,12 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 const connection = supabase.createClient(PROJECT_URL,API_KEY)
 
 
-async function saveUser(emailadd, uname, psw){
+async function saveUser(email, user, password){
 
   const { data, error } = await connection.from("user").insert({
-    Email: emailadd,
-    Username: uname,
-    Password: psw,
+    Email: email,
+    Username: user,
+    Password: password,
 })
   if(data) {
     console.log(data)
@@ -30,9 +30,9 @@ $(document).ready(function(){
   
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
-      let emailadd = $('#emailadd').val();
-      let uname = $('#uname').val();
-      let psw = $('#psw').val();
-      saveUser(email,uname,psw)
+      let email = $('#emailadd').val();
+      let user = $('#uname').val();
+      let password = $('#psw').val();
+      saveUser(email,user,password)
     });
   });

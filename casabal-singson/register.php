@@ -1,3 +1,30 @@
+<?php
+include 'connect.php'
+    if(isset($_POST['register']))
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql="insert into `usersdata`(name, email, password)
+    value('$name','$email','$password')";
+    $result=mysqli_query($con,$sql);
+
+    if($result){
+        echo"Registered successfully!"
+    }else{
+        die(mysqli_error($con));
+    }
+
+?>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -26,18 +53,18 @@
                     <div class="heading mb-4">
                         <h4>Create an account</h4>
                     </div>
-                    <form>
+                    <form action="/casabal-singson/connect.php" method="post">
                         <div class="form-input">
                             <span><i class="fa fa-user"></i></span>
-                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-envelope"></i></span>
-                            <input type="email" placeholder="Email Address" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-lock"></i></span>
-                            <input type="password" placeholder="Password" required>
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12 d-flex">
@@ -49,7 +76,7 @@
                             </div>
                         </div>
                         <div class="text-left mb-3">
-                            <button type="submit" class="btn">Register</button>
+                            <button type="submit" class="btn" names="register">Register</button>
                         </div>
                         <div class="text-center mb-2">
                             <div style="color: #777">Already have an account

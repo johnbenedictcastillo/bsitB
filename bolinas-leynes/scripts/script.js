@@ -6,9 +6,9 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 const connection = supabase.createClient(PROJECT_URL,API_KEY)
 
 
-async function saveStudent(email, uname, psw){
+async function saveUser(email, uname, psw){
 
-  const { data, error } = await connection.from("students").insert({
+  const { data, error } = await connection.from("user").insert({
     email: email,
     uname: uname,
     psw: psw,
@@ -26,13 +26,13 @@ async function saveStudent(email, uname, psw){
 
 }
 
-async function getStudents() {
-  $('#students-table').show();
+async function getUser() {
+  $('#user-table').show();
   let tbody = $("#tbody");
   let loading = $("#loading");
   let tr = "";
   loading.text("Loading....")
-  const { data, error } = await connection.from("students").select("*");
+  const { data, error } = await connection.from("user").select("*");
   if (data) {
       for (var i in data) {
           tr += `<tr>
@@ -56,17 +56,10 @@ $(document).ready(function(){
     // jQuery methods go here
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
-      saveImage();
 
     });
-    $( "#male, #female" ).click(function( event ) {
+    $( "#get-user" ).click(function( event ) {
       event.preventDefault();
-      gender = $(this).val()
-      console.log();
-      getStudentsByGender(gender);
-    })
-    $( "#get-students" ).click(function( event ) {
-      event.preventDefault();
-        getStudents();
+        getUser();
     })
   });

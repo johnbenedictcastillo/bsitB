@@ -816,12 +816,12 @@ h2{
 .cart-wrapper{
     overflow-y: auto;
     max-height: 350px;
-    width:24vw;
+    width:16vw;
 }
 .subtotal{
-    text-align: center;
+    text-align: right;
     padding:5%;
-    margin-right: 16%;
+    margin-right: 10%;
 }
 .checkout, .view-cart{
     width:50%;
@@ -833,7 +833,6 @@ h2{
     margin:10px auto;
     padding:10px 15px;
     border-radius: 10px;
-    margin-left: 17%;
 }
 .view-cart{
     background-color: #fff;
@@ -877,7 +876,7 @@ margin-top: 35%;
  } 
 
  .fa-window-close{
-     color: rgba(248, 154, 65, 0.162);
+     color: rgba(114, 72, 32, 0.495);
  }
  .cancel{
      text-align: right;

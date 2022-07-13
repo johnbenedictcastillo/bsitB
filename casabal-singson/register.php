@@ -1,3 +1,30 @@
+<?php
+include 'connect.php'
+    if(isset($_POST['register']))
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql="insert into `usersdata`(name, email, password)
+    value('$name','$email','$password')";
+    $result=mysqli_query($con,$sql);
+
+    if($result){
+        echo"Registered successfully!"
+    }else{
+        die(mysqli_error($con));
+    }
+
+?>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -49,7 +76,7 @@
                             </div>
                         </div>
                         <div class="text-left mb-3">
-                            <button type="submit" class="btn">Register</button>
+                            <button type="submit" class="btn" names="register">Register</button>
                         </div>
                         <div class="text-center mb-2">
                             <div style="color: #777">Already have an account

@@ -26,33 +26,8 @@ async function saveUser(email, uname, psw){
 
 }
 
-async function getUser() {
-  $('#user-table').show();
-  let tbody = $("#tbody");
-  let loading = $("#loading");
-  let tr = "";
-  loading.text("Loading....")
-  const { data, error } = await connection.from("user").select("*");
-  if (data) {
-      for (var i in data) {
-          tr += `<tr>
-            <td>${data[i].id}</td>
-            <td>${data[i].email}</td>
-            <td>${data[i].uname}</td>
-            <td>${data[i].psw}</td>
-            </tr>`;
-            }
-      tbody.html(tr);
-      loading.text("")
-  }
-
-}
-
 $(document).ready(function(){
 
- 
-    $('#students-table').hide();
-    // jQuery methods go here
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
     });

@@ -15,12 +15,12 @@ async function saveUser(email, username, password){
 })
   if(data) {
     console.log(data)
-    saveUser(email, username, password);
+    //getStudent();
 
   }
   if(error) {
     console.log(error)
-    return null
+    //return null
 
   }
 

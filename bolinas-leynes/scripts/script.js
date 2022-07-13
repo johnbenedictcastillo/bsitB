@@ -9,9 +9,9 @@ const connection = supabase.createClient(PROJECT_URL,API_KEY)
 async function saveUser(email, username, password){
 
   const { data, error } = await connection.from("user").insert({
-    Email: email,
-    Username: username,
-    Password: password,
+    email: email,
+    username: username,
+    password: password,
 })
   if(data) {
     console.log(data)

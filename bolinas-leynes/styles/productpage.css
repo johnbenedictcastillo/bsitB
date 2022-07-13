@@ -1,0 +1,53 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(../assets/websitebg.png);
+	background-repeat: no-repeat;
+  	background-attachment: fixed; 
+ 	background-size: 100% 100%;
+}
+h{
+  font-size: 100px;
+  color: white;
+  margin-top: 50px;
+  -webkit-text-stroke: 1px black;
+}
+.navbar{
+	background: #3A3B3C;
+}
+.navbar img{
+	height: 60px;
+	width: 130px;
+	margin-left: 30px;
+}
+.navbar .form-control{
+	height: 40px;
+	width: 350px;
+	margin-left: 40px;
+}
+.navbar .btn, .navbar-toggler{
+	border: 2px solid black;
+	outline-style: outset;
+	outline-color: #00A098;
+}
+.navbar .navbar-nav form {
+  border: 3px solid #f1f1f1;
+}
+.navbar .navbar-nav .header{
+  text-align: center;
+}
+
+.navbar .navbar-nav a{
+  color:   #00A098;
+  padding: 15px 40px;
+  margin: 8px 60px;
+  cursor: pointer;
+  text-align: center;
+}
+.productlist .nav-item .card{
+  margin: 60px;
+  background-color: black;
+  color: white;
+}
+.productlist .nav-item img{
+  height: 300px;
+}

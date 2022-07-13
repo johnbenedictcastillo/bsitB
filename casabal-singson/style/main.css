@@ -252,7 +252,7 @@ body {
 .container .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1rem;
+    gap: 5rem;
 }
 
 .container .products-container .product {
@@ -264,8 +264,8 @@ body {
     outline-offset: -1.5rem;
     cursor: pointer;
     height: 250px;
-    width: 400px;
-    margin-left: 0px;
+    width: 300px;
+    margin-left: 98px;
 }
 
 .container .products-container .product:hover {

@@ -56,7 +56,6 @@ $(document).ready(function(){
     // jQuery methods go here
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
-
     });
     $( "#get-user" ).click(function( event ) {
       event.preventDefault();

@@ -3,7 +3,7 @@ const PUBLIC_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 
 const connection = supabase.createClient(PROJECT_URL, PUBLIC_ANON_KEY)
 
-const registerUser = async (firstname, lastname, email, password) => {
+const registerUser = async (name, email, password) => {
   const { user, session, error } = await connection.auth.signUp(
     {
       email,

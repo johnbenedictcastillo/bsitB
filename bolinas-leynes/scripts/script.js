@@ -10,8 +10,8 @@ e.preventDefault();
  const email=document.querySelector("#emailadd").value; 
  const username=document.querySelector("#uname").value;
  const password=document.querySelector("#psw").value;
- save.innerText ="saving...";  
- save.setAttribute("disabled","True");
+ usersaccount.innerText ="saving...";  
+ usersaccount.setAttribute("disabled","True");
 
  const res=await database.from("user").insert({
     email:email,

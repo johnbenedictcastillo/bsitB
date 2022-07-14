@@ -23,7 +23,6 @@ async function saveUser(email, username, password){
     //return null
 
   }
-
 }
 
     $( "#registration" ).submit(function( event ) {

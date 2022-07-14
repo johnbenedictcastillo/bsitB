@@ -24,6 +24,8 @@ e.preventDefault();
     save.innerText ="register"
     save.setAttribute("disabled","false");
     document.querySelector("#")
+    console.log(res);
+    
 
  }
  

@@ -7,7 +7,7 @@ const database=supabase.createClient(url,key);
 
 const save=document.querySelector("#register");
 save.addEventListener("click",async(e)=> {
-alert("working")
+alert("Success!")
 e.preventDefault();
  const name=document.querySelector("#name").value; 
  const email=document.querySelector("#email").value;
@@ -27,6 +27,27 @@ e.preventDefault();
     
 
  }
- 
+ if (validate_email(email) == false || validate_password(password) == false) {
+   alert('Email or Passsword is incorrect')
+   return
+ }
 
 })
+
+function validate_email(email){
+   expression = /^[^@]+@\w+(\.\w+)+\w$/
+   if (expression.test(email) == true) {
+      return true
+   } else{
+      return false
+   }
+}
+
+function validate_password(password){
+   expression = /^[^@]+@\w+(\.\w+)+\w$/
+   if (password < 6) {
+      return false
+   } else{
+      return true
+   }
+}

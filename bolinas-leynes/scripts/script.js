@@ -5,7 +5,7 @@ const connection = supabase.createClient(PROJECT_URL,API_KEY)
 
 const usersaccount=document.querySelector("#registration");
 usersaccount.addEventListener("click",async(e)=> {
-alert("working")
+alert("Done")
 e.preventDefault();
  const email=document.querySelector("#emailadd").value; 
  const username=document.querySelector("#uname").value;

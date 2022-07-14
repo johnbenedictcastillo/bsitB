@@ -3,7 +3,6 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 
 const connection = supabase.createClient(PROJECT_URL,API_KEY)
 
-
 async function saveUser(email, username, password){
 
   const { data, error } = await connection.from("user").insert({
@@ -19,9 +18,9 @@ async function saveUser(email, username, password){
   if(error) {
     console.log(error)
     //return null
-
+    
   }
-
+  
 }
 
 $(document).ready(function(){

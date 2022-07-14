@@ -21,7 +21,6 @@ async function saveUser(email, username, password){
     //return null
 
   }
-
 }
 
 $(document).ready(function(){

@@ -5,26 +5,33 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 
 const database = supabase.createClient(PROJECT_URL,API_KEY);
 
-const usersaccount=document.querySelector("#registration");
-usersaccount.addEventListener("click",async(e)=> {
-alert("Done")
-e.preventDefault();
- const email=document.querySelector("#emailadd").value; 
- const username=document.querySelector("#uname").value;
- const password=document.querySelector("#psw").value;
- usersaccount.innerText ="Saving...";  
- usersaccount.setAttribute("disabled","True");
+async function saveUser(email, username, password){
 
- const res=await database.from("user").insert({
-    email:emailadd,
-    username:uname,
-    password:psw
- })
- if(res){
-    usersaccount.innerText ="Registered"
-    usersaccount.setAttribute("disabled","false");
-    console.log(res);
-  
- }
- 
+  const { data, error } = await connection.from("user").insert({
+    emailadd: email,
+    uname: username,
+    psw: password,
 })
+  if(data) {
+    console.log(data)
+    //getUser();
+
+  }
+  if(error) {
+    console.log(error)
+    //return null
+
+  }
+
+}
+
+$(document).ready(function(){
+  
+    $( "#registration" ).submit(function( event ) {
+      event.preventDefault();
+      let email = $('#emailadd').val();
+      let username = $('#uname').val();
+      let password = $('#psw').val();
+      saveUser(email,username,password);
+    });
+  });

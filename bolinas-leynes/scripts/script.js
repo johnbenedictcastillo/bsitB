@@ -22,6 +22,7 @@ e.preventDefault();
     usersaccount.innerText ="Registered"
     usersaccount.setAttribute("disabled","false");
     console.log(res);
+  
  }
  
 })

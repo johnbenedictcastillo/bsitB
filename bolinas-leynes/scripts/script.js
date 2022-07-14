@@ -3,26 +3,34 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 
 const connection = supabase.createClient(PROJECT_URL,API_KEY)
 
-const signUpUser = async (email, username, password) => {
-  const { user, session, error } = await connection.auth.signUp(
-    {
-      email,
-	    username,
-      password
-    }
-  )
 
-  return user;
-}
+async function saveUser(email, username, password){
 
-const logInUser = async (username, password) => {
-  const { user, session, error } = await connection.auth.signIn(
-    {
-      username,
-      password
-    }
-  )
-  console.log("user: ", user)
-  console.log("session: ", connection.auth.session())
+  const { data, error } = await connection.from("user").insert({
+    email: email,
+    username: username,
+    password: password,
+})
+  if(data) {
+    console.log(data)
+    //getUser();
+
+  }
+  if(error) {
+    console.log(error)
+    //return null
+
+  }
 
 }
+
+$(document).ready(function(){
+  
+    $( "#registration" ).submit(function( event ) {
+      event.preventDefault();
+      let email = $('#emailadd').val();
+      let username = $('#uname').val();
+      let password = $('#psw').val();
+      saveUser(email,username,password);
+    });
+  });

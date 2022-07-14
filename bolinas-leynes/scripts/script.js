@@ -19,7 +19,7 @@ e.preventDefault();
     psw:password
  })
  if(res){
-    usersaccount.innerText ="register"
+    usersaccount.innerText ="Registered"
     usersaccount.setAttribute("disabled","false");
     console.log(res);
     

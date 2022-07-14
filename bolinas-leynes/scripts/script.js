@@ -25,6 +25,9 @@ async function saveUser(email, username, password){
   
 }
 
+
+$(document).ready(function(){
+
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
       let email = $('#emailadd').val();
@@ -32,3 +35,4 @@ async function saveUser(email, username, password){
       let password = $('#psw').val();
       saveUser(email,username,password);
     });
+ });

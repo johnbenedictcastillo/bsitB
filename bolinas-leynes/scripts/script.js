@@ -8,9 +8,9 @@ const database = supabase.createClient(PROJECT_URL,API_KEY);
 async function saveUser(email, username, password){
 
   const { data, error } = await connection.from("user").insert({
-    emailadd: email,
-    uname: username,
-    psw: password,
+    email: email,
+    username: username,
+    password: password,
 })
   if(data) {
     console.log(data)
@@ -30,9 +30,9 @@ $(document).ready(function(){
 
     $( "#registration" ).submit(function( event ) {
       event.preventDefault();
-      let email = $('#emailadd').val();
-      let username = $('#uname').val();
-      let password = $('#psw').val();
+      let email = $('#email').val();
+      let username = $('#username').val();
+      let password = $('#password').val();
       saveUser(email,username,password);
     });
  });

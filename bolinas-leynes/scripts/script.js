@@ -5,7 +5,7 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 
 const database = supabase.createClient(PROJECT_URL,API_KEY);
 
-const usersaccount=document.querySelector("#usersaccount");
+const usersaccount=document.querySelector("#registration");
 usersaccount.addEventListener("click",async(e)=> {
 alert("Done")
 e.preventDefault();

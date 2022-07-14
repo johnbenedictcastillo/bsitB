@@ -846,10 +846,10 @@ h2{
 
 .cart-item{
   display:grid;
-  grid-template-columns: 3fr 6fr 1fr;
-  padding:5% 2%;
+  grid-template-columns: 5fr 6fr 1fr;
+  padding:5% 10%;
   border-bottom:solid 1px lightgray; 
-  margin-right: 20%; 
+  margin-right: 10%; 
 }
 
 .cart-item img{
@@ -877,6 +877,7 @@ margin-top: 35%;
 
  .fa-window-close{
      color: rgba(114, 72, 32, 0.495);
+     margin-right: -20px;
  }
  .cancel{
      text-align: right;

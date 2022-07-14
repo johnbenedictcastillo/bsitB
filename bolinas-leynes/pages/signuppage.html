@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Sign Up</title>
@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="/bolinas-leynes/scripts/scripts/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <style>
@@ -64,13 +65,13 @@ button:hover {
 			<img src="../assets/logo2.png"></img>
 			</div>
 			<div class="col us">
-      <form action="#" method="post">
+      <form action="#" id="registration">
 	<div class="header">
     <h1><b><i>Sign Up</i></b></h1><br>
     </div>
   <div class="container">
-    <label for="email">Email:</label><br>
-    <input type="email" placeholder="Enter Email" name="email" required><br>
+    <label for="emailadd">Email:</label><br>
+    <input type="email" placeholder="Enter Email" name="emailadd" required><br>
 <br>
     <label for="uname">Username:</label><br>
     <input type="text" placeholder="Enter Username" name="uname" required><br>
@@ -85,12 +86,20 @@ button:hover {
     </div>
 </div>
 </div>
-
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="/bolinas-leynes/scripts/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+      $("#registration").on("submit", async function (e) {
+      e.preventDefault();
+	let email = $("#emailadd").val();
+      let username = $("#uname").val();
+      let password = $("#psw").val();
 
-
-
+      showPreloader();
+      let user = await signUpUser(email, username, password);
+ 	})
+</script>
 
 </body>
 </html>

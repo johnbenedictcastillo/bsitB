@@ -10,7 +10,7 @@ async function saveUser(email, username, password){
   const { data, error } = await connection.from("user").insert({
     email: email,
     username: username,
-    password: password,
+    password: password
 })
   if(data) {
     console.log(data)

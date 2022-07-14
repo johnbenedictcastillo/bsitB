@@ -16,9 +16,9 @@ e.preventDefault();
  usersaccount.setAttribute("disabled","True");
 
  const res=await database.from("user").insert({
-    emailadd:email,
-    uname:username,
-    psw:password
+    email:emailadd,
+    username:uname,
+    password:psw
  })
  if(res){
     usersaccount.innerText ="Registered"

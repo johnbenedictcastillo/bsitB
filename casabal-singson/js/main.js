@@ -23,7 +23,6 @@ e.preventDefault();
  if(res){
     save.innerText ="register"
     save.setAttribute("disabled","false");
-    document.querySelector("#")
     console.log(res);
     
 

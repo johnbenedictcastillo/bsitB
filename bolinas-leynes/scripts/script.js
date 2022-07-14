@@ -26,13 +26,3 @@ const logInUser = async (username, password) => {
   console.log("session: ", connection.auth.session())
 
 }
-
-      $("#registration").on("submit", async function (e) {
-      e.preventDefault();
-			let email = $("#emailadd").val();
-      let username = $("#uname").val();
-      let password = $("#psw").val();
-
-      showPreloader();
-      let user = await signUpUser(email, username, password);
- })

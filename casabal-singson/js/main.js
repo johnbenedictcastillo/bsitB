@@ -27,27 +27,22 @@ e.preventDefault();
     
 
  }
- if (validate_email(email) == false || validate_password(password) == false) {
-   alert('Email or Passsword is incorrect')
-   return
+ 
+ const signInUser = async (email: any, password: any) => {
+   const { user, session, error } = await connection.auth.signIn(
+     {
+       email,
+       password
+     }
+   )
+   console.log("user: ", user)
+   console.log("session: ", connection.auth.session())
+ 
  }
 
-})
-
-function validate_email(email){
-   expression = /^[^@]+@\w+(\.\w+)+\w$/
-   if (expression.test(email) == true) {
-      return true
-   } else{
-      return false
-   }
-}
-
-function validate_password(password){
-   expression = /^[^@]+@\w+(\.\w+)+\w$/
-   if (password < 6) {
-      return false
-   } else{
-      return true
-   }
-}
+ async function signInWithEmail() {
+   const { user, error } = await supabase.auth.signIn({
+     email: 'any',
+     password: 'any',
+   })
+ }

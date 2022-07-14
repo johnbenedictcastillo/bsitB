@@ -5,28 +5,6 @@ const url="https://spwunpnkjjahgtjpfenx.supabase.co";
 const database=supabase.createClient(url,key);
 
 
-const save=document.querySelector("#register");
-save.addEventListener("click",async(e)=>{
-alert("Success!")
-e.preventDefault();
- const name=document.querySelector("#name").value; 
- const email=document.querySelector("#email").value;
- const password=document.querySelector("#password").value;
- save.innerText ="saving...";  
- save.setAttribute("disabled","True");
-
- const res=await database.from("users").insert({
-    name:name,
-    email:email,
-    password:password
- })
- if(res){
-    save.innerText ="register"
-    save.setAttribute("disabled","false");
-    console.log(res);
-
-}
-})
  
  
 var button = document.getElementById("log");
@@ -37,12 +15,21 @@ async function myfunction(){
    var email = document.getElementById("email");
    var pass = document.getElementById("password");
 
-   const { data, error } = await connection.from("users").select("*").eq('email',email).eq('password',pass);;
+   const { data, error } = await database.from("users").select("*").eq('email', email.value).eq('password', pass.value);
    if (data){
+    if (data.length > 0){
          window.alert("Successfully Login!");
+         sessionStorage.setItem("name", data[0].name);
+         sessionStorage.setItem("email", data[0].email);
+        sessionStorage.setItem("password", data[0].password);
+        location.replace('/casabal-singson/product.html')
+
+    }else {
+        window.alert("Failed to Log-In!");
          email.value = null;
          pass.value = null;
-         //location.replace('/casabal-singson/login.html')
+    }
+        
 
    }
     if(error){
@@ -50,5 +37,6 @@ async function myfunction(){
          email.value = null;
          pass.value = null;
     }
-   
+    
 }
+

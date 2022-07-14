@@ -3,7 +3,7 @@ const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 
 
 
-const connection = supabase.createClient(PROJECT_URL,API_KEY)
+const database = supabase.createClient(PROJECT_URL,API_KEY);
 
 const usersaccount=document.querySelector("#registration");
 usersaccount.addEventListener("click",async(e)=> {

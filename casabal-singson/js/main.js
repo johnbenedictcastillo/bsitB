@@ -11,7 +11,7 @@ alert("working")
 e.preventDefault();
  const name=document.querySelector("#name").value; 
  const email=document.querySelector("#email").value;
- const password=document.querySelector("#passsowrd").value;
+ const password=document.querySelector("#password").value;
  save.innerText ="saving...";  
  save.setAttribute("disabled","True");
 

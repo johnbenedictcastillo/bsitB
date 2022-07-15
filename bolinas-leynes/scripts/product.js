@@ -143,5 +143,3 @@ function updateCartUI(){
     cartIcon.classList.remove('non-empty')
 }
 document.addEventListener('DOMContentLoaded', ()=>{updateCartUI()})
-    
-document.getElementById('user').textContent = sessionStorage.getItem("username");

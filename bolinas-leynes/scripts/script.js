@@ -13,6 +13,7 @@ async function saveUser(email, username, password){
     password: password
 })
   if(data) {
+    alert("Registered");
     console.log(data)
     //getUser();
 
@@ -25,7 +26,6 @@ async function saveUser(email, username, password){
   
 }
 
-
 $(document).ready(function(){
 
     $( "#registration" ).submit(function( event ) {
@@ -34,5 +34,11 @@ $(document).ready(function(){
       let username = $('#username').val();
       let password = $('#password').val();
       saveUser(email,username,password);
+      //location.replace('/bolinas-leynes/index.html')
     });
- });
+ 
+  });
+
+  
+
+  document.getElementById('userid').textContent = sessionStorage.getItem("username");

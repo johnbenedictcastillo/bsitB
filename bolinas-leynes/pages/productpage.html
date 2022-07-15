@@ -1,141 +1,246 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Product Page</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../styles/productpage.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8f27d68390.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/productpage.css" />
+    <title>Product Page</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
   <script src="/bolinas-leynes/scripts/script.js"></script>
-</head>
-<body>
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png"></img></a>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn" type="submit">&#128270</button>
-      </form>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="fa fa-bars"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav nav-pills flex-column flex-sm-row">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png"></img></a>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn" type="submit">&#128270</button>
+            </form>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-pills flex-column flex-sm-row">
         <li class="nav-item">
-          <a class="nav-link" href="./aboutus.html">About Us</a>
-        </li>
+                <a class="nav-link" href="./aboutus.html">About Us</a>
+              </li>
         <li class="nav-item">
-          <a class="nav-link" href="./contactus.html">Contact Us</a>
-        </li>
-	<li class="nav-item">
-          <a class="nav-link" href="./productpage.html">Product Page</a>
-        </li>
- 	<li class="nav-item">
-          <div id="userid"></div>
-        </li>
-	<li class="nav-item">
-          <a class="nav-link" href="../index.html">Sign Out</a>
-        </li>
-      </ul>
+                <a class="nav-link" href="./contactus.html">Contact Us</a>
+              </li>
+          <li class="nav-item">
+                <a class="nav-link" href="./productpage.html">Product Page</a>
+              </li>
+          <li class="nav-item">
+                <a class="nav-link" href="../index.html">Sign Out</a>
+              </li>
+        <li class="nav-item userss">
+                <div id="user"></div>
+        <li class="nav-item">
+      <div class="cart-box">
+        <div class="cart-icon">
+          <i class="fas fa-cart-arrow-down fa-2x"></i>
+        </div>
+        <div class="whole-cart-window hide">
+          <h2>Shopping Cart</h2>
+          <div class="cart-wrapper">
+            <!-- <div class="cart-item">
+                       <img src="./assets/applecase.jpg"> 
+                       <div class="details">
+                           <h3>Iphone Case</h3>
+                           <p>Soft Case for iPhone 13.
+                            <span class="quantity">Quantity: 1</span>
+                               <span class="price">Price: &#8369;75.00</span>
+                           </p>
+                       </div>
+                       <div class="cancel"><i class="fas fa-window-close"></i></div>
+                    </div> -->
+            <!-- item 2 -->
+            <!-- <div class="cart-item">
+                        <img src="./assets/gameear.jpg"> 
+                        <div class="details">
+                            <h3>Gaming Earpads</h3>
+                            <p>Good sound quality.
+                             <span class="quantity">Quantity: 1</span>
+                                <span class="price">Price: &#8369;200.00</span>
+                            </p>
+                        </div>
+                        <div class="cancel"><i class="fas fa-window-close"></i></div>
+                     </div> -->
+          </div>
+          <div class="subtotal">Subtotal: &#8369;0.00</div>
+          <div class="checkout">Checkout</div>
+          <div class="view-cart">View Cart</div>
+        </div>
       </div>
+	</li>
+</ul>
+</div>
 </nav>
-<div class="container">
-<h><i>SnA Products</i></h>
-</div>
-<div class="container productlist">
-<div class="row">
-<ul class="nav justify-content-center">
-<div class="col">
-  <li class="nav-item">
-    <div class="card">
-  <img src="../assets/applecase.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Iphone Case</h5>
-    <p class="card-text">&#8369;75.00</p>
-    <a href="./iphonecasepage.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-    <div class="card">
-  <img src="../assets/gameear.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Gaming Earpads</h5>
-    <p class="card-text">&#8369;200.00</p>
-    <a href="./gearpadspage.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-    <div class="card">
-  <img src="../assets/x7.jpeg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">X7 Controller</h5>
-    <p class="card-text">&#8369;400.00</p>
-    <a href="./x7page.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-</li>
-</div>
-<div class="col">
-  <li class="nav-item">
-        <div class="card">
-  <img src="../assets/heads.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Headset</h5>
-    <p class="card-text">&#8369;175.00</p>
-    <a href="./headset.html" class="btn btn-primary">View</a>
-  </div>
-  </div>
-  <div class="card">
-  <img src="../assets/musb.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Micro USB Charger</h5>
-    <p class="card-text">&#8369;120.00</p>
-    <a href="./musb.html" class="btn btn-primary">View</a>
-  </div>
-  </div>
-  <div class="card">
-  <img src="../assets/rcase.webp" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Realme Case</h5>
-    <p class="card-text">&#8369;75.00</p>
-    <a href="./realmecasepage.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-  </li>
-  </div>
-  <div class="col">
-  <li class="nav-item">
-        <div class="card">
-  <img src="../assets/wspeaker2.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Wireless Speaker</h5>
-    <p class="card-text">&#8369;100.00</p>
-    <a href="./wspeaker.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-        <div class="card">
-  <img src="../assets/s5.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">S5 Controller</h5>
-    <p class="card-text">&#8369;375.00</p>
-    <a href="./s5.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-        <div class="card">
-  <img src="../assets/wcharger.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Wireless Charger</h5>
-    <p class="card-text">&#8369;500.00</p>
-    <a href="./wcharger.html" class="btn btn-primary">View</a>
-  </div>
-</div>
-  </li>
-  </div>
-  </ul>
-  </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="/bolinas-leynes/scripts/script.js"></script>
+
+
+    <section class="shop-section">
+      <div class="card-wrapper">
+        <div data-id="1" class="card-item">
+          <img src="../assets/applecase.jpg" />
+          <div class="details">
+            <h3>Iphone Case</h3>
+            <p>
+              <span>
+                Soft Case for iPhone 13.
+                </span>
+
+              <span class="price">Price: &#8369;75.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./iphonecasepage.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div data-id="2" class="card-item">
+          <img src="../assets/gameear.jpg" />
+          <div class="details">
+            <h3>Gaming Earpads</h3>
+            <p>
+              <span>
+                Good sound quality.
+              </span>
+
+              <span class="price">Price: &#8369;200.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./gearpadspage.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 3 -->
+        <div data-id="3" class="card-item">
+          <img src="../assets/x7.jpeg" />
+          <div class="details">
+            <h3>X7 Controller</h3>
+            <p>
+              <span
+                >Wireless Gaming Controller.
+                </span>
+
+              <span class="price">Price: &#8369;400.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./x7page.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 4 -->
+        <div data-id="4" class="card-item">
+          <img src="../assets/heads.jpg" />
+          <div class="details">
+            <h3>Headset</h3>
+            <p>
+              <span>
+                Good sound quality.
+              </span>
+
+              <span class="price">Price: &#8369;175.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./headset.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+        <!-- product 5 -->
+        <div data-id="5" class="card-item">
+          <img src="../assets/musb.jpg" />
+          <div class="details">
+            <h3>Micro USB Charger</h3>
+            <p>
+              <span>
+                Fast Charger 15watts.
+              </span>
+              <span class="price">Price: &#8369;120.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./musb.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 6 -->
+        <div data-id="6" class="card-item">
+          <img src="../assets/rcase.webp" />
+          <div class="details">
+            <h3>Realme Case</h3>
+            <p>
+              <span>
+                Shockproof Case for realme c35.
+              </span>
+
+              <span class="price">Price: &#8369;75.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./realmecasepage.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 7 -->
+        <div data-id="7" class="card-item">
+          <img src="../assets/wspeaker2.jpg" />
+          <div class="details">
+            <h3>Wireless Speaker</h3>
+            <p>
+              <span>
+                Clear sound & Good bass.
+              </span>
+
+              <span class="price">Price: &#8369;100.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./wspeaker.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 8 -->
+        <div data-id="8" class="card-item">
+          <img src="../assets/s5.jpg" />
+          <div class="details">
+            <h3>S5 Controller</h3>
+            <p>
+              <span>
+                Wireless Gaming Controller.
+              </span>
+
+              <span class="price">Price: &#8369;375.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./s5.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- product 9 -->
+
+        <div data-id="9" class="card-item">
+          <img src="../assets/wcharger.jpg" />
+          <div class="details">
+            <h3>Wireless Charger</h3>
+            <p>
+              <span>
+                Wireless Charger 15watts.
+              </span>
+
+              <span class="price">Price: &#8369;500.00</span>
+              <span class="add-to-cart-btn">Add To Cart</span>
+              <a href="./wcharger.html" class="btn btn-primary">View</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+ <script src="/bolinas-leynes/scripts/cartss.js"></script>
+  <script src="/bolinas-leynes/scripts/product.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>

@@ -38,7 +38,6 @@ $(document).ready(function(){
       let country = $('#country').val();
       let subject = $('#subject').val();
       sentUser(firstname, lastname, email, country, subject);
-      //location.replace('/bolinas-leynes/index.html')
     });
  
   });

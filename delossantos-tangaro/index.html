@@ -1,24 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+	<title> 
+		Home | Fish and Fins
+	</title>
+	<head>
+	<link rel="stylesheet" href="Homepage.css">
+	</head>
+	<style>
+body {
+    font-family: "Lato", sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles//style.css">
-    <a href="./pages//products.html">> Product Page</a>
-    <link rel="stylesheet" href="./pages//product.html">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-</head>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
-<body
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
 
-    <script href="./scripts//script.css"></script>
-    <script>
-    </script>
-</body>
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"> Fish and Fins</a>
+
+</div>
+
+<div id="main">
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+ 	document.getElementById("menu").style.position = "static";
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+ 	document.getElementById("menu").style.position = "fixed";
+
+
+}
+</script>
+     
+				<div class = "menu" id = "menu">
+			<ul class = "ul">
+				<div class= "menutext">
+				<li class = "li"><span 
+
+style="color:white;cursor:pointer;padding: 0px 20px 0px 0px;" onclick="openNav
+
+()">&#9776;</span></li>
+				<li class = "li"><a href = "index.html" class = 
+
+"active">Home</a></li>
+				<li class = "drop"><a href ="resume.html">About</a></li>
+				<li Class = "li"><a href = "JS.html">Contact Us</a></li>
+				<li Class = "li"><a href = "Tables.html">Projects</a></li>
+				<li class = "drop"><a>Menu</a>
+				<div class="dc">
+      				<a href="#">Sign Up</a>
+      				<a href="#">Log in</a>
+				</div>
+				</li>
+				</div>
+			</ul>
+		</div>	
+			
+		
+			<div class = "skylord">
+			
+			</div>
+			<div class = "footer">
+			| Copyright 2022<br>
+			All Rights Reserved
+			</div>
+	</div>
+	</body>
+</html>

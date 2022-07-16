@@ -15,8 +15,7 @@ body .fa{
 	font-size: 50px;
 	color: #000;
 }
-/* Style inputs */
-input[type=text], select, textarea {
+input, select, textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

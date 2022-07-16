@@ -54,6 +54,14 @@ width: 700px;
   cursor: pointer;
   text-align: center;
 }
+
+.navbar .navbar-nav .nav-item div{
+  color:   #00A098;
+  padding: 15px 40px;
+  margin: 8px 60px;
+  text-align: center;
+}
+
 .productlist .nav-item .card{
   margin: 60px;
   background-color: black;

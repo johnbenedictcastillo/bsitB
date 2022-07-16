@@ -6,8 +6,8 @@ const database=supabase.createClient(url,key);
 
 
 const save=document.querySelector("#register");
-save.addEventListener("click",async(e)=> {
-alert("working")
+save.addEventListener("click",async(e)=>{
+alert("Success!")
 e.preventDefault();
  const name=document.querySelector("#name").value; 
  const email=document.querySelector("#email").value;
@@ -24,9 +24,31 @@ e.preventDefault();
     save.innerText ="register"
     save.setAttribute("disabled","false");
     console.log(res);
-    
 
- }
- 
-
+}
 })
+ 
+ 
+var button = document.getElementById("log");
+button.addEventListener("click", myfunction);
+
+async function myfunction(){
+
+   var email = document.getElementById("email");
+   var pass = document.getElementById("password");
+
+   const { data, error } = await connection.from("users").select("*").eq('email',email).eq('password',pass);;
+   if (data){
+         window.alert("Successfully Login!");
+         email.value = null;
+         pass.value = null;
+         //location.replace('/casabal-singson/login.html')
+
+   }
+    if(error){
+      window.alert("Failed to Log-In!");
+         email.value = null;
+         pass.value = null;
+    }
+   
+}

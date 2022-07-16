@@ -813,6 +813,12 @@ h2{
     padding:15px 10px;
 }
 
+.ngalan{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
 .cart-wrapper{
     overflow-y: auto;
     max-height: 350px;

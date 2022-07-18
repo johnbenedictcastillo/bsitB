@@ -4,7 +4,7 @@
 					We have a variety of things here that you might like.
 
 
-		Members:
+		Member:
 
 			Mendoza, Jeremiah R.
 					-Home Page

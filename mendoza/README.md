@@ -1,11 +1,10 @@
-		PROJECT NAME:
-					NAKAMA
+		PROJECT NAME: NAKAMA
 
 					Nakama is a shopping website where you can buy stuff that is relation to One Piece Anime. 
 					We have a variety of things here that you might like.
 
 
-Members:
+		Members:
 
 			Mendoza, Jeremiah R.
 					-Home Page

@@ -24,3 +24,6 @@ Group Members
         - Contact Us
         - Scripts
         - Supabase (Storage)
+
+Dashboard:
+https://bsit-b.vercel.app/masacupan-valdeabella
